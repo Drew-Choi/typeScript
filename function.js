@@ -19,3 +19,23 @@ const add3 = (a, b, c) => {
 };
 console.log(add3(1, 2));
 console.log(add3(1, 2, 3));
+const superPrint = (arr) => {
+    arr.forEach(i => console.log(i));
+};
+superPrint([1, 2, 3, 4]);
+superPrint([true, false, true]);
+superPrint(["a", "b"]);
+//이것 같은 경우 number, boolean, string이 섞여있지만,
+//generic타입을 해줬기 때문에, 타입스크립트가 해당되는 타입을 선언해준다.
+superPrint([1, 2, true, false, 'a']);
+const superPrint2 = (arr) => arr[0];
+const 제1번 = superPrint2([1, 2, 3, 4]);
+const 제2번 = superPrint2([true, false, true]);
+const 제3번 = superPrint2(["a", "b"]);
+//아래 4번 처럼, 제네릭타입으로 여러가지 타입을 가지게 될때, 이걸 다형성(polymorphism)이라고 한다.
+const 제4번 = superPrint2([1, 2, true, false, 'a']);
+const genericRecap = (a) => a[0];
+const 제1번1 = genericRecap([1, 2, 3, 4], "x");
+const 제2번2 = genericRecap([true, false, true], {});
+const 제3번3 = genericRecap(["a", "b"], true);
+const 제4번4 = genericRecap([1, 2, true, false, 'a'], []);
