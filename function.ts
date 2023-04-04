@@ -81,3 +81,32 @@ const 제1번1 = genericRecap([1,2,3,4], "x")
 const 제2번2 = genericRecap([true, false, true], {})
 const 제3번3 = genericRecap(["a", "b"], true)
 const 제4번4 = genericRecap([1, 2, true, false, 'a'], [])
+
+
+//+++
+//Generic활용법
+type Player1<T> = {
+  name: string,
+  extraInfo: T,
+}
+
+const nicolas: Player1<{favFood: string}> = {
+  name: "nico",
+  extraInfo: {
+    favFood: 'kimchi'
+  }
+}
+
+const lynn: Player1<null> = {
+  name: 'lynn',
+  extraInfo: null,
+}
+
+//----
+type A = Array<number>
+
+let a7: A = [1,2,3,4]
+
+function printAllNumbers(arr: Array<number>) {
+  
+}

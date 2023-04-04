@@ -39,3 +39,16 @@ const 제1번1 = genericRecap([1, 2, 3, 4], "x");
 const 제2번2 = genericRecap([true, false, true], {});
 const 제3번3 = genericRecap(["a", "b"], true);
 const 제4번4 = genericRecap([1, 2, true, false, 'a'], []);
+const nicolas = {
+    name: "nico",
+    extraInfo: {
+        favFood: 'kimchi'
+    }
+};
+const lynn = {
+    name: 'lynn',
+    extraInfo: null,
+};
+let a7 = [1, 2, 3, 4];
+function printAllNumbers(arr) {
+}
